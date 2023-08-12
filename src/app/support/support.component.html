@@ -1,0 +1,73 @@
+<!-- Quote Start -->
+<div id="support-start" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">Télémaintenance</h5>
+                    <h1 class="mb-0">Nous sommes en mesure de résoudre rapidement et efficacement vos problèmes techniques</h1>
+                </div>
+                <p class="mb-4">
+                    En tant que partenaire de votre contrat de maintenance, nous vous proposons un service de prise de contrôle à distance de votre ordinateur pour une résolution rapide et sans déplacement de vos problèmes. Veuillez noter que toute intervention en dehors du contrat de maintenance sera facturée en fonction du temps passé.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                              <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                              <h5 class="mb-2">Envoyez un E-mail</h5>
+                              <h4 class="text-primary mb-0" style="font-size: 18px;">support@ideal-connect.tn</h4>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                              <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                              <h5 class="mb-2">Appelez Maintenant</h5>
+                              <h4 class="text-primary mb-0" style="font-size: 18px;">00 (216) 55 313 784</h4>
+                            </div>
+                    </div>
+                </div>
+             </div>                       
+         </div>
+            <div class="col-lg-5" [formGroup]="form">
+                <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                    <form action="javascript:void(0)" (submit)="sendi()">
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <a class="btn btn-primary btn-custom-size rounded btn-block" href="https://www.clubic.com/telecharger-fiche67482-teamviewer.html">Installer Team Viewer</a>
+                            </div>                                                       
+                            <div class="col-12">
+                                <input type="text" formControlName="f_name" class="form-control bg-light border-0" placeholder="Nom" style="height: 45px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" formControlName="f_tel" class="form-control bg-light border-0" placeholder="Téléphone" style="height: 45px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" formControlName="f_viewr" class="form-control bg-light border-0" placeholder="ID Team Viewr" style="height: 45px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="date" formControlName="f_date" class="form-control bg-light border-0" style="height: 45px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="time" formControlName="f_heure" class="form-control bg-light border-0" style="height: 55px;" required>
+                            </div>                                                                                   
+                            <div class="col-12">
+                                <textarea  formControlName="description" class="form-control bg-light border-0" rows="3" placeholder="Description" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit">Envoyer</button>
+                            </div>                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote End -->

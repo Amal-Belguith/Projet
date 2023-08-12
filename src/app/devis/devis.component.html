@@ -1,0 +1,97 @@
+<!-- Quote Start -->
+<div id="devis-start" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">Demander un Devis</h5>
+                    <h1 class="mb-0">Besoin d'un devis gratuit ? N'hésitez pas à nous contacter</h1>
+                </div>
+                <p class="mb-4">Nous vous remercions de l'intérêt que vous portez à notre entreprise et à nos services. Nous serions ravis de vous fournir un devis personnalisé pour répondre à vos besoins spécifiques.
+
+                    Afin de vous offrir une estimation précise, veuillez remplir le formulaire de demande de devis ci-joint. </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                              <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                              <h5 class="mb-2">Envoyez un E-mail</h5>
+                              <h4 class="text-primary mb-0" style="font-size: 18px;">commercial@ideal-connect.tn</h4>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-6">
+                          <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 50px;">
+                              <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                              <h5 class="mb-2">Appelez Maintenant</h5>
+                              <h4 class="text-primary mb-0" style="font-size: 18px;">00 (216) 22 741 725</h4>
+                            </div>
+                    </div>
+                </div>
+             </div>                       
+         </div>
+            <div class="col-lg-5" [formGroup]="form">
+                <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                  <form action="javascript:void(0)" (submit)="sendy()">
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <input type="text" formControlName="fr_name" class="form-control bg-light border-0" placeholder="Nom" style="height: 55px;" required>
+                              </div>
+                            <div class="col-12">
+                                <input type="email" formControlName="fr_email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;" required>
+                                 <div *ngIf="form.get('fr_email')?.invalid && form.get('fr_email')?.touched" class="text-danger">
+                                  Veuillez saisir une adresse email valide.
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" formControlName="fr_tel" class="form-control bg-light border-0" placeholder="Téléphone" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" formControlName="fr_soc" class="form-control bg-light border-0" placeholder="Nom de la Société" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                              <select (change)="onServiceChange($event)" formControlName="fr_service" class="form-select bg-light border-0" style="height: 55px;" required>
+                                <!-- Placeholder for the first dropdown -->
+                                <option value="" selected disabled>Choisir un Service</option>
+                                <option value="Service informatique">Service informatique</option>
+                                <option value="Produit">Produit</option>
+                              </select>
+                            </div>
+                            
+                            <div class="col-12" *ngIf="selectedService === 'Produit'">
+                              <select id="autreListeDeroulante" formControlName="fr_produit" class="form-select bg-light border-0" style="height: 55px;" >
+                                <!-- Placeholder for the second dropdown -->
+                                <option value="" selected disabled>Choisir un Produit</option>
+                                <option value="Vidéo Surveillance">Vidéo Surveillance</option>
+                                <option value="Alarme anti-intrusion">Alarme anti-intrusion</option>
+                                <option value="Controle d'accés">Controle d'accés</option>
+                                <option value="Watchguard">Watchguard</option>
+                                <option value="Fortinet">Fortinet</option>
+                                <option value="Bitdefender">Bitdefender</option>
+                                <option value="Cable UTP/FTP">Cable UTP/FTP</option>
+                                <option value="Fibre Optique">Fibre Optique</option>
+                                <option value="Accessoires">Accessoires</option>
+                                <option value="AKCP Monitoring Data Center">AKCP Monitoring Data Center</option>
+                                <!-- Add other options for the product dropdown here -->
+                              </select>
+                            </div>                            
+                            <div class="col-12">
+                                <textarea formControlName="fr_description" class="form-control bg-light border-0" rows="3" placeholder="Description" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit">Envoyer</button>
+                            </div>                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote End -->
